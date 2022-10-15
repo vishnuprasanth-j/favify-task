@@ -71,11 +71,11 @@ function Cardcomp({data,setfaviorite,index,isbutton,Hover}) {
   return (<>
 
       <Card className={Hover?'card card card-hover ':'card card'}  style={{ width:'12rem',marginRight:'0.5rem', marginBottom:'0.5rem' ,backgroundColor:'rgb(246, 246, 242)'}} onMouseLeave={()=>setactive(false)} onMouseEnter={()=>{setactive(true)}} >
-      {isbutton&&active&&<ButtonGroup className='d-flex position-absolute' style={{top:'50%',left:'30px'}}>
-      <Button variant="primary" className='btn'  value={index} onClick={(e)=>setfaviorite(e.target.value)}>Faviorite</Button>
-      <Button variant="primary" className='btn' value={data.id} onClick={(e)=>{
+      {isbutton&&active&&<ButtonGroup className='d-flex position-absolute' style={{top:'40%',left:'12%',right:"12%"}}>
+      <Button variant="primary" id='fav' className='btn'  value={index} onClick={(e)=>setfaviorite(e.target.value)}>X</Button>
+      <Button variant="primary" id='playlist' className='btn' value={data.id} onClick={(e)=>{
         handleShow(e)
-      }}>+</Button>
+      }}>O</Button>
       </ButtonGroup>}
     <Card.Img  className="c-img pt-1 img-fluid" variant="top" src={data.image} />
     <Card.Body>

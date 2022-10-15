@@ -95,7 +95,7 @@ console.log("render")
     <Header title={'Search'}/>
      </section>
       <Container fluid>
-        <InputGroup className="mb-3" size='lg'>
+        <InputGroup className="mb-3 align-items-center" size='lg'>
           <Form.Control
             type="text"
             placeholder="Enter the song Name"
@@ -135,6 +135,16 @@ console.log("render")
   })
   }
 </Container>*/}
+<Container fluid className=" d-flex justify-content-center">
+<div>
+<Button variant="primary" id='fav-desc' className='btn'>X</Button>
+<span id="#fav-desc-sp">-Faviorite</span>
+</div>
+<div>
+<Button variant="primary" id='playlist-desc' className='btn' >O</Button>
+<span id="#playlist-desc-sp">-Playlist</span>
+</div>
+</Container>
       <Container fluid>
       <Row className="mx-2 rows-cols-6 d-flex-column justify-content-lg-around  justify-content-sm-center row">
         {

@@ -1,5 +1,32 @@
 .searchPage{
     width:100%;
+    font-family: 'Montserrat', sans-serif;
+  
+    .btn{
+        margin: 20px;
+        border: none;
+        &#fav{
+            background-color:rgb(8, 245, 8);
+            border-radius: 20px;
+      
+        }
+        &#playlist{
+            background-color:rgb(93, 150, 236);
+            border-radius: 20px;
+        }
+        &#fav-desc{
+            background-color:rgb(8, 245, 8);
+            border-radius: 20px;
+            margin-right: 1px;
+        }
+        &#playlist-desc{
+            background-color:rgb(93, 150, 236);
+            border-radius: 20px;
+            margin-right: 1px;
+        
+        }
+     }
+    
     .S-bar{
       background-color:   #efe8ff;
     }
