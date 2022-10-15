@@ -10,7 +10,10 @@ const Home = () => {
 
 React.useEffect(()=>{
   let fav = JSON.parse(localStorage.getItem("myList", "[]"));
-   setfavdata(fav)
+  if (fav.length >0){
+    setfavdata(fav)
+  }
+   
   let playlist=localStorage.getItem("myPlaylist","[]")
   setplaylistdata(playlist)
 },[])
@@ -26,7 +29,7 @@ return <div className='home'>
 
 return <Cardcomp data={data}  index={index} isbutton={false} Hover={false}/>
 
-}):<h1>Nothing to show</h1>
+}):<text className='t'>Nothing to show</text>
             }
           </Row>
  </Container>

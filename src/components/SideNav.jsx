@@ -25,7 +25,7 @@ const SideNav = () => {
   
     <nav className="nav-sidenav">
       <ul style={{padding:0}}>
-        <NavLink to="/" >
+        <NavLink to="/home" >
           <li style={{listStyle:'none'}}>
             <Homeicon className='icons'/>
             <div className="menu-text">Home</div>

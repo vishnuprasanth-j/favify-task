@@ -1,8 +1,14 @@
 .home{
     width: 100%;
     #heading{
+        font-family: 'Source Code Pro', monospace;
+        font-size: 3rem;
+        
+    }
+    .t{
+        margin-top: 50px;
         font-family: 'Montserrat', sans-serif;
-        font-size: 5rem;
-        text-decoration: underline rgb(151, 150, 151);
+        font-size: 2rem;
+        text-align: center;
     }
 }
