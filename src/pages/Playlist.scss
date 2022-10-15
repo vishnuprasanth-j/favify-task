@@ -1,0 +1,33 @@
+.playlistPage{
+    width:100%;
+    font-family: 'Montserrat', sans-serif;
+    
+ .pl-grp{
+    display: flex;
+    align-items: center;
+    //background-color: #fff05f;
+    background-color: #fffbe8;
+    margin-bottom: 10px;
+
+ 
+    .pl-name{
+        flex:1
+
+    }
+    .btn{
+        margin: 10px;
+    }
+ }
+ .s-grp{
+    width: 50%;
+   
+ }
+}
+
+@media only screen and (max-width: 784px) {
+    .playlistPage {
+        .s-grp{
+            width: 100%;
+           }
+    }
+}

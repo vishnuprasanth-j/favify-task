@@ -1,0 +1,147 @@
+
+$color_1: black;
+$color_2: #fff;
+$background-color_1: #FFEFE8;
+$background-color_2: #00253d;
+$background-color_3: rgb(131, 133, 140);
+
+a {
+	color: $color_1;
+}
+.sidenav {
+	z-index: 100000;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.7);
+	position: sticky;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	position: -webkit-sticky;
+	background-color: $background-color_1;
+}
+input#menu {
+	display: none;
+}
+.icon {
+	display: block;
+	height: 24px;
+	width: 24px;
+	padding: 16px;
+	z-index: 200;
+	cursor: pointer;
+	.menu {
+		background-color: $background-color_2;
+		content: '';
+		height: 2px;
+		width: 20px;
+		position: absolute;
+		transition: background-color ease .3s,top ease .3s .3s,transform ease .3s;
+		left: 18px;
+		top: 27px;
+		&::before {
+			background-color: $background-color_2;
+			content: '';
+			height: 2px;
+			width: 20px;
+			position: absolute;
+			transition: background-color ease .3s,top ease .3s .3s,transform ease .3s;
+			top: -6px;
+		}
+		&::after {
+			background-color: $background-color_2;
+			content: '';
+			height: 2px;
+			width: 20px;
+			position: absolute;
+			transition: background-color ease .3s,top ease .3s .3s,transform ease .3s;
+			top: 6px;
+		}
+	}
+	&:hover {
+		.menu {
+			background-color: $background-color_3;
+			&::before {
+				background-color: $background-color_3;
+			}
+			&::after {
+				background-color: $background-color_3;
+			}
+		}
+	}
+}
+#menu {
+	&:checked {
+		+ {
+			.icon {
+				.menu {
+					background: transparent;
+					&::before {
+						transform: rotate(45deg);
+						top: 0;
+						transition: top ease .3s, transform ease .3s .3s;
+					}
+					&::after {
+						transform: rotate(-45deg);
+						top: 0;
+						transition: top ease .3s, transform ease .3s .3s;
+					}
+				}
+			}
+		}
+		~ {
+			nav {
+				width: 200px;
+			}
+		}
+	}
+}
+nav {
+	padding-top: 60px;
+	transition: width ease .6s;
+	width: 60px;
+	z-index: 100;
+	overflow: hidden;
+	ul {
+		list-style: none;
+	}
+	li {
+		line-height: 60px;
+		padding-left: 16px;
+		transition: all .3s;
+		white-space: nowrap;
+	
+		&:hover {
+			cursor: pointer;
+			background-color: $background-color_3;
+			color: $color_2;
+		}
+	}
+}
+.menu-text {
+	display: inline-block;
+	margin-left: 20px;
+	color: $color_1;
+	margin-top: 9px;
+	vertical-align: middle;
+}
+.icons {
+	transform: translateY(5px);
+}
+@media only screen and (max-width : 480px) {
+	.icon {
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+	nav {
+		width: 0px;
+	}
+	#menu {
+		&:checked {
+			~ {
+				nav {
+					width: 60px;
+				}
+			}
+		}
+	}
+}

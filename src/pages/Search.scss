@@ -1,0 +1,13 @@
+.searchPage{
+    width:100%;
+    .S-bar{
+      background-color:   #efe8ff;
+    }
+    .S-bar:focus{
+        border-color: #efe8ff !important;
+        box-shadow: 0 0 0 0.3rem #efe8ff !important;
+    }
+    .card{
+        margin: 10px;
+    }
+}

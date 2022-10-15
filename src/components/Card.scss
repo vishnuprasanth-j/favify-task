@@ -1,0 +1,45 @@
+.card-hover:active,.card-hover:hover{
+   
+.card-body{
+ opacity: 0.2;
+
+ transition: ease-out 0.1s;
+
+}
+.c-img{
+    opacity: 0.2;
+    transition: ease-in 0.5s;
+}
+ .btn{
+    
+    z-index: 10;
+  
+    border: none;
+ }
+
+}
+
+@media only screen and (min-width:537px){
+    .searchPage{
+        .card{ font-family: 'Montserrat', sans-serif;
+            width: '12rem';
+
+        .card-body{
+                .c-title{
+                    font-weight: bolder;
+                 }
+            }
+        }
+        
+    }
+    
+    
+}
+
+@media only screen and (max-width:536px) {
+ .searchPage{
+    .card{
+        width: 9rem;
+    }
+ }  
+}

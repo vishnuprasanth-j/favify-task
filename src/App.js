@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import {Route,Routes} from 'react-router-dom';
+import SideNav from './components/SideNav';
+import Home from './pages/Home';
+import Search from './pages/Search';
+import Faviorites from './pages/Faviorites';
+import Playlist from './pages/Playlist';
+import './App.scss'
+import React from 'react';
+import Landing from './pages/Landing'
 
 function App() {
+React.useEffect(() => {
+ if (! localStorage.getItem('myList','[]') && ! localStorage.setItem("myPlaylist","[]") ){
+  localStorage.setItem("myList","[]")
+  localStorage.setItem("myPlaylist","[]")
+ } 
+ else{
+return
+
+ }
+}, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <div className="App" >
+   <SideNav/>
+   <Routes>
+    <Route path='/' element={<Landing/>}/>
+    <Route path='/home' element={<Home/>} />
+    <Route path='/search' element={<Search/>} />
+    <Route path='/faviorites' element={<Faviorites/>} />
+    <Route path='/playlist' element={<Playlist/>} />
+</Routes>
+
     </div>
   );
 }
